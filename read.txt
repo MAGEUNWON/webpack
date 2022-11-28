@@ -1,0 +1,4 @@
+npm run build 해줘야 dist 폴더 생김 
+npm run dev 해야 서버 뜸. 
+타입스크립트로 style-components 쓸거면 따로 @types/styled-components 해줘야함
+

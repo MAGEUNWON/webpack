@@ -18,14 +18,14 @@ module.exports = merge(common, {
   output: {
     filename: "[name].[contenthash].js", //번들파일 이름
     path: path.resolve(__dirname, "../dist"), //빌드되는 파일이 만들어지는 위치, __dirname: 현재 디렉토리
-    publickPath:"./", // 얜 앞에 . 있어야함. / 얘만 쓰면 렌더링이 안됨
+    publicPath:"./", // 얜 앞에 . 있어야함. / 얘만 쓰면 렌더링이 안됨
     clean: true,
   },
   // 로더 설정
   module: {
     rules: [
       {
-        test: /\.css$/i, //loader를 적용시킬 파일 정규식 명시
+        test: /\.(sa|sc|c)ss$/i, //loader를 적용시킬 파일 정규식 명시
         use: [ //사용할 loader
           MiniCssExtractPlugin.loader,
           "css-loader",
