@@ -1,7 +1,9 @@
-const {merge} = require("webpack-merge");
+// const {merge} = require("webpack-merge");
+import { merge } from "webpack-merge";
 const common = require("./webpack.common");
-const path = require("path");
-
+// import common from "./webpack.common"
+// const path = require("path");
+import path from 'path';
 
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // css 파일을 추출해주는 플러그인. HTML에 css를 알아서 link 해줌
