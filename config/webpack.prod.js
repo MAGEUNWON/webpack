@@ -3,17 +3,17 @@ const common = require("./webpack.common");
 const path = require("path");
 
 
-// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // css 파일을 추출해주는 플러그인. HTML에 css를 알아서 link 해줌
 // 이건 prod환경에서 사용 추천. css 파일을 추출하게 되면 css파일과 js파일을 parallel load(한꺼번에 출력으로 싣는 것) 할 수 있어 사용자가 페이지를 빠르게 load 할 수 있음. (dev 환경은 style-loader 추천)
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+// import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-// const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 // 자동으로 최적화적용. 번들 사이즈 줄임
-import TerserPlugin from "terser-webpack-plugin";
+// import TerserPlugin from "terser-webpack-plugin";
 
-// const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-import CssMinimizerPlugin from "css-minimizer-webpack-plugin"
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+// import CssMinimizerPlugin from "css-minimizer-webpack-plugin"
 
 module.exports = merge(common, {
   mode: "production", //배포 모드
